@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60856FBE1D8113B8009D51AB /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 60856FBD1D8113B8009D51AB /* HexColor.m */; };
 		60C6CBE91D7FBC58009262BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CBE81D7FBC58009262BC /* main.m */; };
 		60C6CBEC1D7FBC58009262BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CBEB1D7FBC58009262BC /* AppDelegate.m */; };
 		60C6CBEF1D7FBC58009262BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6CBEE1D7FBC58009262BC /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60856FBC1D8113B8009D51AB /* HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
+		60856FBD1D8113B8009D51AB /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
 		60C6CBE41D7FBC58009262BC /* iDemoColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDemoColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C6CBE81D7FBC58009262BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60C6CBEA1D7FBC58009262BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 		60C6CBE61D7FBC58009262BC /* iDemoColor */ = {
 			isa = PBXGroup;
 			children = (
+				60856FBC1D8113B8009D51AB /* HexColor.h */,
+				60856FBD1D8113B8009D51AB /* HexColor.m */,
 				60C6CC041D7FBD45009262BC /* UIColor+Extend.h */,
 				60C6CC051D7FBD45009262BC /* UIColor+Extend.m */,
 				60C6CBFE1D7FBCB6009262BC /* ColorView.h */,
@@ -164,6 +169,7 @@
 				60C6CBEF1D7FBC58009262BC /* ViewController.m in Sources */,
 				60C6CBEC1D7FBC58009262BC /* AppDelegate.m in Sources */,
 				60C6CBE91D7FBC58009262BC /* main.m in Sources */,
+				60856FBE1D8113B8009D51AB /* HexColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				60C6CBFD1D7FBC58009262BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

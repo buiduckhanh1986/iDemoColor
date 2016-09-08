@@ -12,4 +12,8 @@
 - (instancetype) initWithHex: (NSString*) hex
                        alpha: (CGFloat) alpha
                        frame: (CGRect) rect;
+
+- (void) fadeOut;
+
+@property(nonatomic, strong) NSString* hex;
 @end

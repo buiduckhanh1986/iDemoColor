@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ColorView.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,8 @@
 {
     NSArray* cpArray;
     ColorView *view1,*view2,*view3,*view4,*view5;
+    
+    int colorPatternIndex;
 }
 
 - (void)viewDidLoad {
@@ -56,6 +60,41 @@
     [self.view addSubview:view3];
     [self.view addSubview:view4];
     [self.view addSubview:view5];
+    
+    
+    colorPatternIndex = 0;
+    
+    [self performSelector:@selector(animateColor) withObject:nil afterDelay:1];
 }
 
+
+- (void) animateColor
+{
+    [UIView animateWithDuration:3.0 animations:^{
+        NSArray *cp = cpArray[self->colorPatternIndex];
+        
+        view1.hex = cp[0];
+        view2.hex = cp[1];
+        view3.hex = cp[2];
+        view4.hex = cp[3];
+        view5.hex = cp[4];
+        
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:1.0 animations:^{
+            [view1 fadeOut];
+            [view2 fadeOut];
+            [view3 fadeOut];
+            [view4 fadeOut];
+            [view5 fadeOut];
+        } completion:^(BOOL finished) {
+            self->colorPatternIndex ++;
+            
+            if(self->colorPatternIndex >= cpArray.count)
+                self->colorPatternIndex = 0;
+            
+            [self animateColor];
+        }];
+    }];
+}
 @end
